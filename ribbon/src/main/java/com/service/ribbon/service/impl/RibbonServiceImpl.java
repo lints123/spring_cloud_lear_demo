@@ -1,6 +1,7 @@
 package com.service.ribbon.service.impl;
 
 import com.service.ribbon.service.RibbonService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -9,8 +10,7 @@ import javax.annotation.Resource;
 @Service
 public class RibbonServiceImpl implements RibbonService {
 
-
-    @Resource
+    @Autowired
     RestTemplate restTemplate;
 
     @Override

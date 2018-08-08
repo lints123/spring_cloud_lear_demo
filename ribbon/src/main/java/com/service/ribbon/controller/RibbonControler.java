@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class RibbonControler {
     @Autowired
-    RibbonService helloService;
+    RibbonService ribbonService;
 
     @GetMapping(value = "/hi")
     public String hi(@RequestParam(value = "name", defaultValue = "lints")String name) {
-        return helloService.hiService( name );
+        return ribbonService.hiService( name );
     }
 }
